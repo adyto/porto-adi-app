@@ -1,21 +1,17 @@
-import type { NextPage } from 'next'
-import React, { useEffect, useRef } from "react"
-import Script from "next/script"
-
-import Head from 'next/head'
+import React, { useRef } from 'react';
+import Script from 'next/script';
 // https://bobbyhadz.com/blog/react-document-getelementbyid-returns-null#:~:text=getElementById()%20returns%20NULL%20in%20React%20%23,method%20in%20the%20useEffect%20hook.
 
-const Home: NextPage = () => {
-  const refMenu = useRef() as React.MutableRefObject<HTMLUListElement>
-  const refHamburger = useRef() as React.MutableRefObject<HTMLDivElement>
+function Home() {
+  const refMenu = useRef() as React.MutableRefObject<HTMLUListElement>;
+  const refHamburger = useRef() as React.MutableRefObject<HTMLDivElement>;
   const onHamburgerClick = () => {
-    refMenu.current.classList.toggle("hidden")
-    refHamburger.current.classList.toggle("bg-white")
-  }
-  console.log('test111')
+    refMenu.current.classList.toggle('hidden');
+    refHamburger.current.classList.toggle('bg-white');
+  };
   return (
     <>
-      <section className='font-nunito'>
+      <section className="font-nunito">
         {/* intro section */}
         <div className="lg:h-screen md:h-screen sm:h-screen h-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden">
           {/* navbar */}
@@ -27,42 +23,43 @@ const Home: NextPage = () => {
               </div>
               <ul className="hidden md:flex space-x-10 text-gray-600 font-bold text-sm uppercase">
                 <li className="hover:text-gray-500">
-                  <a href="#">homepage</a>
+                  <a href="/#">homepage</a>
                 </li>
                 <li className="hover:text-gray-500">
-                  <a href="#">about me</a>
+                  <a href="/#">about me</a>
                 </li>
                 <li className="hover:text-gray-500">
-                  <a href="#">service</a>
+                  <a href="/#">service</a>
                 </li>
                 <li className="hover:text-gray-500">
-                  <a href="#">works</a>
+                  <a href="/#">works</a>
                 </li>
                 <li className="hover:text-gray-500">
-                  <a href="#">contact</a>
+                  <a href="/#">contact</a>
                 </li>
               </ul>
-              <img className="hidden md:block w-8 cursor-pointer" src="/icon/ic-moon.png" />
-              <div ref={refHamburger} onClick={onHamburgerClick} className="space-y-1 md:hidden cursor-pointer z-20">
-                <div className="w-6 h-0.5 bg-black"></div>
-                <div className="w-6 h-0.5 bg-black"></div>
-                <div className="w-6 h-0.5 bg-black"></div>
+              <img className="hidden md:block w-8 cursor-pointer" src="/icon/ic-moon.png" alt="" />
+
+              <div ref={refHamburger} onClick={onHamburgerClick} onKeyDown={onHamburgerClick} className="space-y-1 md:hidden cursor-pointer z-20 " role="button" tabIndex={0}>
+                <div className="w-6 h-0.5 bg-black" />
+                <div className="w-6 h-0.5 bg-black" />
+                <div className="w-6 h-0.5 bg-black" />
               </div>
               <ul id="menu" ref={refMenu} className="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
                 <li>
-                  <a href="#">homepage</a>
+                  <a href="/#">homepage</a>
                 </li>
                 <li>
-                  <a href="#">about me</a>
+                  <a href="/#">about me</a>
                 </li>
                 <li>
-                  <a href="#">service</a>
+                  <a href="/#">service</a>
                 </li>
                 <li>
-                  <a href="#">works</a>
+                  <a href="/#">works</a>
                 </li>
                 <li>
-                  <a href="#">contact</a>
+                  <a href="/#">contact</a>
                 </li>
               </ul>
             </div>
@@ -73,13 +70,12 @@ const Home: NextPage = () => {
           <img className="absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover" src="img/man.png" alt="" />
 
           {/* circle */}
-          <div className="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-indigo-900 rounded-full -z-10">
-          </div>
+          <div className="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-indigo-900 rounded-full -z-10" />
 
           {/* animated text */}
           <div className="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/5 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold">
             <span className="text-gray-600">Frelance</span>
-            <p id="text" className="text-red-500"></p>
+            <p id="text" className="text-red-500" />
           </div>
 
           {/* texts */}
@@ -94,8 +90,9 @@ const Home: NextPage = () => {
       {/* <script src="hamburger1.js"></script> */}
       <Script src="autotyping.js" />
     </>
-  )
+  );
 }
+export default Home;
 
 // const hamburger = document.getElementById("hamburger")
 // const menu = document.getElementById("menu")
@@ -104,5 +101,3 @@ const Home: NextPage = () => {
 //   menu?.classList.toggle("hidden")
 // })
 // console.log('test')
-
-export default Home
