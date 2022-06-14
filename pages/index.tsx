@@ -10,22 +10,6 @@ const Home: NextPage = () => {
   const onHamburgerClick = () => {
     refMenu.current.classList.toggle("hidden")
   }
-  // useEffect(() => {
-  //   const hamburger = document.getElementById('hamburger')
-  //   const menu = document.getElementById('menu')
-
-  //   if (hamburger != null && menu != null) {
-  //     hamburger.addEventListener("click", () => {
-  //       menu.classList.toggle("hidden")
-  //     })
-  //   }
-  //   // const refHamburger = document.getElementById("hamburger")
-  //   // const refMenu = document.getElementById("menu")
-
-  //   // hamburger.addEventListener("click", () => {
-  //   //   menu.classList.toggle("hidden")
-  //   // })
-  // });
   console.log('test111')
   return (
     <>
