@@ -16,7 +16,7 @@ function Home() {
         <div className="lg:h-screen md:h-screen sm:h-screen h-screen bg-gradient-to-t from-indigo-200 relative overflow-hidden">
           {/* navbar */}
           <nav className="w-full fixed top-0 bg-white z-10">
-            <div className="container mx-auto py-5 items-center flex justify-between">
+            <div className="container mx-auto py-5 my-3 md:my-10 items-center flex justify-between">
               <div className="flex items-center gap-2">
                 <img className="w-8 rounded-full" src="/img/ic-sad.png" alt="" />
                 <span className="text-2xl font-bold text-indigo-900">Ady.to</span>
@@ -83,6 +83,96 @@ function Home() {
             <h1 className="text-4xl font-bold text-indigo-900">Hi, Saya Adi Yulianto</h1>
             <p className="text-gray-400">Saya adalah seorang frelance developer, designer dan ui/ux. Portofolio ini merupakan bagian dari kegiatan yang telah saya lakukan dengan hasil akhir pengalaman saya akan di tampilkan di website.</p>
             <a className="bg-indigo-600 text-white text-xl px-3 py-2 rounded-md font-semibold w-fit" href="#contact">Hire Me!</a>
+          </div>
+        </div>
+        {/* about */}
+        <div className="px-10">
+          <div className="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
+            {/* left */}
+            <div className="relative">
+              <img className="h-1/4 absolute top-0 left-0 -z-10" src="img/dots.png" alt="" />
+              <div className="h-full rounded-full overflow-hidden">
+                <img src="img/portrait.png" alt="" />
+              </div>
+            </div>
+            {/* right */}
+            <div className="my-auto flex flex-col gap-3">
+              <h1 className="text-indigo-600 font-bold">ABOUT ME</h1>
+              <h1 className="text-3xl font-medium">Better Design</h1>
+              <h1 className="text-3xl font-medium">Better Experience</h1>
+              <p className="text-gray-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eius facere dolore omnis reprehenderit ipsam distinctio quo, dolores sunt sint quae nobis aliquam similique ut provident quam laboriosam nemo voluptas.
+              </p>
+              <h2 className="text-gray-400 font-medium">HTML</h2>
+              <div className="w-full bg-gray-200 h-1.5 rounded-md">
+                <div className="w-full bg-indigo-600 h-1.5 rounded-md" />
+              </div>
+              <h2 className="text-gray-400 font-medium">Javascript</h2>
+              <div className="w-full bg-gray-200 h-1.5 rounded-md">
+                <div className="w-4/6 bg-indigo-600 h-1.5 rounded-md" />
+              </div>
+              <h2 className="text-gray-400 font-medium">React JS</h2>
+              <div className="w-full bg-gray-200 h-1.5 rounded-md">
+                <div className="w-5/6 bg-indigo-600 h-1.5 rounded-md" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* services */}
+        <div>
+          <div className="container mx-auto">
+            {/* top */}
+            <div className="flex flex-col gap-3 items-center">
+              <h1 className="text-indigo-600 font-bold">SERVICES</h1>
+              <h1 className="text-3xl">What do I offer?</h1>
+              <p className="w-1/2 text-center text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim voluptatibus facere rerum sunt et officia tempora! Architecto pariatur, perspiciatis dicta esse quo numquam voluptas at facilis natus tenetur illo? Velit?</p>
+            </div>
+            {/* bottom */}
+            <div className="p-5 sm:p-0 flex flex-wrap justify-between">
+              {/* card */}
+              <div className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img className="w-10" src="img/icon.png" alt="" />
+                <h1 className="font-medium text-lg">UI / UX Design</h1>
+                <p className="text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veniam aliquam accusamus, cupiditate repudiandae ullam totam atque non, provident deleniti officia iusto. Impedit non ratione libero suscipit officia odio temporibus.</p>
+                <a className="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+              </div>
+              {/* card */}
+              <div className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img className="w-10" src="img/icon.png" alt="" />
+                <h1 className="font-medium text-lg">UI / UX Design</h1>
+                <p className="text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veniam aliquam accusamus, cupiditate repudiandae ullam totam atque non, provident deleniti officia iusto. Impedit non ratione libero suscipit officia odio temporibus.</p>
+                <a className="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+              </div>
+              {/* card */}
+              <div className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img className="w-10" src="img/icon.png" alt="" />
+                <h1 className="font-medium text-lg">UI / UX Design</h1>
+                <p className="text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veniam aliquam accusamus, cupiditate repudiandae ullam totam atque non, provident deleniti officia iusto. Impedit non ratione libero suscipit officia odio temporibus.</p>
+                <a className="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+              </div>
+              {/* card */}
+              <div className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img className="w-10" src="img/icon.png" alt="" />
+                <h1 className="font-medium text-lg">UI / UX Design</h1>
+                <p className="text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veniam aliquam accusamus, cupiditate repudiandae ullam totam atque non, provident deleniti officia iusto. Impedit non ratione libero suscipit officia odio temporibus.</p>
+                <a className="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+              </div>
+              {/* card */}
+              <div className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img className="w-10" src="img/icon.png" alt="" />
+                <h1 className="font-medium text-lg">UI / UX Design</h1>
+                <p className="text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veniam aliquam accusamus, cupiditate repudiandae ullam totam atque non, provident deleniti officia iusto. Impedit non ratione libero suscipit officia odio temporibus.</p>
+                <a className="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+              </div>
+              {/* card */}
+              <div className="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3">
+                <img className="w-10" src="img/icon.png" alt="" />
+                <h1 className="font-medium text-lg">UI / UX Design</h1>
+                <p className="text-gray-400"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos veniam aliquam accusamus, cupiditate repudiandae ullam totam atque non, provident deleniti officia iusto. Impedit non ratione libero suscipit officia odio temporibus.</p>
+                <a className="text-indigo-600 font-semibold text-sm" href="">Read More</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
