@@ -8,3 +8,4 @@ const exampleTyping = new AutoTyping('#text', exampleText, {
     waitBetweenWords: 500,
 });
 exampleTyping.start()
+
